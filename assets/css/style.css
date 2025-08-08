@@ -1,0 +1,115 @@
+/* Color Palette */
+:root {
+  --primary-color: #2196f3; /* Materialize Blue */
+  --primary-color-dark: #1769aa;
+  --accent-color: #f48fb1; /* Pink accent */
+  --background-color: #f9f9f9;
+  --text-color: #212121;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.primary-color {
+  background-color: var(--primary-color) !important;
+}
+
+.primary-color-text {
+  color: var(--primary-color) !important;
+}
+
+section {
+  padding: 60px 0;
+  scroll-margin-top: 80px;
+}
+
+h4 {
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* About Section */
+#about img {
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+/* Projects Section */
+.card .card-image img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* Skills Section */
+#skills i.material-icons {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+/* Contact Section */
+#contact form .input-field input,
+#contact form .input-field textarea {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+#contact form button {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  #about img {
+    max-width: 180px;
+  }
+}
+
+/* Work Experience stacked style */
+#experience .experience-card {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.responsive-img {
+  margin: 0 auto;
+  max-height: 100px;
+  padding-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.experience-card ul {
+  list-style: none;           /* Remove default bullets */
+  padding-left: 0;
+  margin-top: 12px;
+}
+
+.experience-card ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.education-details p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.education-details strong {
+  color: #2196f3; /* primary brand color */
+}
