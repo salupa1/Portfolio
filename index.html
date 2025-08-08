@@ -15,7 +15,7 @@
   <!-- AOS Animate on Scroll CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
 
@@ -23,7 +23,18 @@
   <div class="navbar-fixed">
     <nav class="white z-depth-1">
       <div class="nav-wrapper container">
-        <a href="#!" class="brand-logo black-text">Saloni Upadhyay</a>
+        <!-- Brand with responsive name -->
+        <a href="#!" class="brand-logo black-text">
+          <span class="hide-on-small-only">Saloni Upadhyay</span>
+          <span class="hide-on-med-and-up">Saloni U.</span>
+        </a>
+  
+        <!-- Mobile menu trigger -->
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger black-text">
+          <i class="material-icons">menu</i>
+        </a>
+  
+        <!-- Desktop menu -->
         <ul class="right hide-on-med-and-down">
           <li><a href="#about" class="black-text">About</a></li>
           <li><a href="#work_experience" class="black-text">Work Experience</a></li>
@@ -35,252 +46,269 @@
       </div>
     </nav>
   </div>
+  
+  <!-- Mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work_experience">Work Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
   <!-- About Section -->
   <section id="about" class="section container">
     <div class="row valign-wrapper">
-      <div class="col s12 m4 center-align" data-aos="fade-right">
-        <img src="./assets/img/my-photo.JPG" alt="Saloni Upadhyay" class="circle responsive-img z-depth-2" />
+      <div class="col s12 m4 center-align fade-scale" data-aos="fade-right">
+        <img src="./assets/img/my-photo.jpeg" alt="Saloni Upadhyay" class="circle responsive-img z-depth-2" />
       </div>
-      <div class="col s12 m8" data-aos="fade-left">
-        <h4>About Me</h4>
-        <p>
-          Hi! I’m Saloni, a dedicated business professional with a background in business management and technology. 
-          I hold a Bachelor's degree in Business Management and Technology, which gives me a strong foundation to bridge technical solutions with business needs. 
-          Skilled in modern web development, I enjoy crafting clean, scalable, and user-friendly applications. My experience also includes HR roles, 
-          where I enhanced team dynamics and operational workflows. I’m passionate about continuous learning and leveraging technology to solve real-world problems across various domains.
-        </p>
-        <a href="./assets/resume/Saloni_Resume.pdf" class="btn-flat primary-color-text" download>
-          <i class="material-icons left">file_download</i>Download Resume
-        </a>
+      <div class="col s12 m8 fade-scale" data-aos="fade-left">
+        <div class="about-text-content">
+          <p id="typing-text"></p>
+          <a href="./assets/resume/Saloni_Resume.pdf" class="btn-flat primary-color-text" download>
+            <i class="material-icons left">file_download</i>Download Resume
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Work Experience Section -->
-<section id="work_experience" class="section container">
-  <h4 class="center-align" data-aos="fade-up">Work Experience</h4>
-  
-  <div data-aos="fade-up" data-aos-delay="100" class="experience-card">
-    <div class="card hoverable">
-      <div class="card-content">
-        <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
-          <div>
-            <span class="card-title primary-color-text">Human Resources Partner</span>
-            <p class="grey-text text-darken-1">Amazon | July 2025 – Present</p>
+  <section id="work_experience" class="section container">
+    <h4 class="center-align" data-aos="fade-up">Work Experience</h4>
+    
+    <div class="experience-card" style="animation-delay: 0.1s;">
+      <div class="card hoverable">
+        <div class="card-content">
+          <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span class="card-title primary-color-text">Human Resources Partner</span>
+              <p class="grey-text text-darken-1">Amazon | July 2025 – Present</p>
+            </div>
+            <a href="https://www.amazon.com/" target="_blank"><img alt="Amazon logo"
+              src="./assets/img/amazon-logo.jpg" class="responsive-img center-block" /></a>
           </div>
-          <a href="https://www.amazon.com/" target="_blank"><img alt="Amazon logo"
-            src="./assets/img/amazon-logo.jpg" class="responsive-img center-block" /></a>
+            <ul class="experience-list browser-default">
+              <li>Resolved employee queries with 95% first-contact resolution rate which improved HR response time site-wide</li>
+              <li>Partnered with people managers end-to-end on performance management and investigations, cutting policy violations by over 25% while strengthening associate accountability across all shifts</li>
+              <li>Implemented a structured, fair write-up process for timeclock violations, driving a 20% reduction in unproductive labor hours through improved time discipline</li>
+              <li>Collaborated with Operations and Safety teams to resolve recurring Voice of the People themes, decreasing repeat issues by 25% and boosting cross-department morale and trust</li>
+            </ul>
         </div>
+      </div>
+    </div>
+
+    <div class="experience-card" style="animation-delay: 0.3s;">
+      <div class="card hoverable">
+        <div class="card-content">
+          <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span class="card-title primary-color-text">Brand Associate</span>
+              <p class="grey-text text-darken-1">Athleta | March 2025 – June 2025</p>
+            </div>
+            <a href="https://www.athleta.com/" target="_blank"><img alt="Athleta logo"
+              src="./assets/img/athleta-logo.png" class="responsive-img center-block" /></a>
+          </div>
           <ul class="experience-list browser-default">
-            <li>Resolved employee queries with 95% first-contact resolution rate which improved HR response time site-wide</li>
-            <li>Partnered with people managers end-to-end on performance management and investigations, cutting policy violations by over 25% while strengthening associate accountability across all shifts</li>
-            <li>Implemented a structured, fair write-up process for timeclock violations, driving a 20% reduction in unproductive labor hours through improved time discipline</li>
-            <li>Collaborated with Operations and Safety teams to resolve recurring Voice of the People themes, decreasing repeat issues by 25% and boosting cross-department morale and trust</li>
+            <li>Processed $5,000+ in daily sales, ensuring accuracy and reducing checkout time by streamlining POS processes</li>
+            <li>Delivered personalized service to 50+ customers per shift, increasing loyalty program signups by 30% MoM</li>
           </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div data-aos="fade-up" data-aos-delay="300" class="experience-card">
-    <div class="card hoverable">
-      <div class="card-content">
-        <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
-          <div>
-            <span class="card-title primary-color-text">Brand Associate</span>
-            <p class="grey-text text-darken-1">Athleta | March 2025 – June 2025</p>
+    <div class="experience-card" style="animation-delay: 0.7s;">
+      <div class="card hoverable">
+        <div class="card-content">
+          <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span class="card-title primary-color-text">HR Partner Intern</span>
+              <p class="grey-text text-darken-1">Amazon | June 2024 – August 2024</p>
+            </div>
+            <a href="https://www.amazon.com/" target="_blank"><img alt="Amazon logo"
+              src="./assets/img/amazon-logo.jpg" class="responsive-img center-block" /></a>
           </div>
-          <a href="https://www.athleta.com/" target="_blank"><img alt="Athleta logo"
-            src="./assets/img/athleta-logo.png" class="responsive-img center-block" /></a>
+            <ul class="experience-list browser-default">
+            <li>Spearheaded engagement strategies with leadership, resulting in a 17% improvement in employee satisfaction</li>
+            <li>Executed the rollout of technology self-service tools, improving employee accessibility and communication, which directly resulted in a 15% increase in workforce retention and a 20% reduction in HR-related queries</li>
+            <li>Ensured 100% data accuracy for 300+ employees in HRIS and payroll systems; streamlined onboarding and resolved employee concerns with sound judgment in ambiguous situations</li>
+          </ul>
         </div>
-        <ul class="experience-list browser-default">
-          <li>Processed $5,000+ in daily sales, ensuring accuracy and reducing checkout time by streamlining POS processes</li>
-          <li>Delivered personalized service to 50+ customers per shift, increasing loyalty program signups by 30% MoM</li>
-        </ul>
       </div>
     </div>
-  </div>
 
-  <div data-aos="fade-up" data-aos-delay="300" class="experience-card">
-    <div class="card hoverable">
-      <div class="card-content">
-        <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
-          <div>
-            <span class="card-title primary-color-text">IT Assistant</span>
-            <p class="grey-text text-darken-1">Bellevue College | March 2023 – June 2025</p>
+    <div class="experience-card" style="animation-delay: 0.5s;">
+      <div class="card hoverable">
+        <div class="card-content">
+          <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span class="card-title primary-color-text">IT Assistant</span>
+              <p class="grey-text text-darken-1">Bellevue College | March 2023 – June 2025</p>
+            </div>
+            <a href="https://www.bellevuecollege.edu/" target="_blank"><img alt="Bellevue College logo"
+              src="./assets/img/bellevue-college-logo.png" class="responsive-img center-block" /></a>
           </div>
-          <a href="https://www.bellevuecollege.edu/" target="_blank"><img alt="Bellevue College logo"
-            src="./assets/img/bellevue-college-logo.png" class="responsive-img center-block" /></a>
-        </div>
-        <ul class="experience-list browser-default">
-          <li>Provided technical support to 20+ students and staff, ensuring equipment functionality and resolving issues</li>
-          <li>Documented IT workflows and created support resources, improving efficiency and reducing recurring issues</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div data-aos="fade-up" data-aos-delay="500" class="experience-card">
-    <div class="card hoverable">
-      <div class="card-content">
-        <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
-          <div>
-            <span class="card-title primary-color-text">HR Partner Intern</span>
-            <p class="grey-text text-darken-1">Amazon | June 2024 – August 2024</p>
-          </div>
-          <a href="https://www.amazon.com/" target="_blank"><img alt="Amazon logo"
-            src="./assets/img/amazon-logo.jpg" class="responsive-img center-block" /></a>
-        </div>
           <ul class="experience-list browser-default">
-          <li>Spearheaded engagement strategies with leadership, resulting in a 17% improvement in employee satisfaction</li>
-          <li>Executed the rollout of technology self-service tools, improving employee accessibility and communication, which directly resulted in a 15% increase in workforce retention and a 20% reduction in HR-related queries</li>
-          <li>Ensured 100% data accuracy for 300+ employees in HRIS and payroll systems; streamlined onboarding and resolved employee concerns with sound judgment in ambiguous situations</li>
-        </ul>
+            <li>Provided technical support to 20+ students and staff, ensuring equipment functionality and resolving issues</li>
+            <li>Documented IT workflows and created support resources, improving efficiency and reducing recurring issues</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Education Section -->
-<section id="education" class="section container">
-  <h4 class="center-align" data-aos="fade-up">Education</h4>
+  <!-- Education Section -->
+  <section id="education" class="section container">
+    <h4 class="center-align" data-aos="fade-up">Education</h4>
 
-  <div data-aos="fade-up" data-aos-delay="300" class="education-card">
-    <div class="card hoverable">
-      <div class="card-content">
-        <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
-          <div>
-            <span class="card-title primary-color-text">Bachelor's Degree</span>
-            <p class="grey-text text-darken-1">Bellevue College | Bellevue, Washington</p>
+    <div data-aos="fade-up" data-aos-delay="300" class="education-card">
+      <div class="card hoverable">
+        <div class="card-content">
+          <div class="job-header" style="display:flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span class="card-title primary-color-text">Bachelor's Degree</span>
+              <p class="grey-text text-darken-1">Bellevue College | Bellevue, Washington</p>
+            </div>
+            <a href="https://www.bellevuecollege.edu/" target="_blank"><img alt="Bellevue College logo"
+              src="./assets/img/bellevue-college-logo.png" class="responsive-img center-block" /></a>
           </div>
-          <a href="https://www.bellevuecollege.edu/" target="_blank"><img alt="Bellevue College logo"
-            src="./assets/img/bellevue-college-logo.png" class="responsive-img center-block" /></a>
-        </div>
-        <div class="education-details" style="margin-top: 16px; font-size: 0.95rem; color: #555;">
-          <p><strong>Major:</strong> Business Management and Technology</p>
-          <p><strong>Graduated:</strong> December 2024</p>
-          <p><strong>Cumulative GPA:</strong> 3.81</p>
-          <p><strong>Relevant Coursework:</strong> Project Management, Business Spreadsheet Analysis & Design, Marketing Measurement & Analytics, E-commerce Development Strategy, Operations Management, Accounting & Finance, Web Development</p>
+          <div class="education-details" style="margin-top: 16px; font-size: 0.95rem; color: #555;">
+            <p><strong>Major:</strong> Business Management and Technology</p>
+            <p><strong>Graduated:</strong> December 2024</p>
+            <p><strong>Cumulative GPA:</strong> 3.81</p>
+            <p><strong>Relevant Coursework:</strong> Project Management, Business Spreadsheet Analysis & Design, Marketing Measurement & Analytics, E-commerce Development Strategy, Operations Management, Accounting & Finance, Web Development</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Projects Section -->
-<section id="projects" class="section container">
-  <h4 class="center-align" data-aos="fade-up">Projects</h4>
-  <div class="row">
-    <!-- Project 1 -->
-    <div class="col s12 m6 l4" data-aos="zoom-in">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="./assets/img/bookshelf.png" alt="Bookshelf App" />
-          <span class="card-title primary-color-text">Bookshelf</span>
-        </div>
-        <div class="card-content">
-          <p>Full-stack app for managing book collections with search and favorites.</p>
-          <br>
-          <p><strong>Tech:</strong> Node.js, Express, PostgreSQL, EJS</p>
-        </div>
-        <div class="card-action">
-          <a href="https://github.com/salupa1/bookshelf" target="_blank" class="primary-color-text">View Project</a>
+  <section id="projects" class="section container">
+    <h4 class="center-align" data-aos="fade-up">Projects</h4>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col s12 m6 l4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="./assets/img/bookshelf.png" alt="Bookshelf App" />
+            <span class="card-title primary-color-text">Bookshelf</span>
+          </div>
+          <div class="card-content">
+            <p>Full-stack app for managing book collections with search and favorites.</p>
+            <br>
+            <p><strong>Tools:</strong> Node.js, Express, PostgreSQL, EJS</p>
+          </div>
+          <div class="card-action">
+            <a href="https://github.com/salupa1/bookshelf" target="_blank" class="primary-color-text">View Project</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Project 2 -->
-    <div class="col s12 m6 l4" data-aos="zoom-in" data-aos-delay="100">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="./assets/img/my-portfolio.jpg" alt="My Portfolio" />
-          <span class="card-title primary-color-text">Portfolio Website</span>
-        </div>
-        <div class="card-content">
-          <p>Responsive portfolio website showcasing projects and skills.</p>
-          <br>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-        </div>
-        <div class="card-action">
-          <a href="https://github.com/salupa1/Portfolio" target="_blank" class="primary-color-text">View Project</a>
+      <!-- Project 2 -->
+      <div class="col s12 m6 l4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="./assets/img/my-portfolio.jpg" alt="My Portfolio" />
+            <span class="card-title primary-color-text">Portfolio Website</span>
+          </div>
+          <div class="card-content">
+            <p>Responsive portfolio website showcasing projects and skills.</p>
+            <br>
+            <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+          </div>
+          <div class="card-action">
+            <a href="https://github.com/salupa1/Portfolio" target="_blank" class="primary-color-text">View Project</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Project 3 -->
-    <div class="col s12 m6 l4" data-aos="zoom-in" data-aos-delay="200">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="./assets/img/oceanography-image.jpg" alt="Oceanic Dashboard" />
-          <span class="card-title primary-color-text">Climate Change Oceanic Dashboard Prediction System</span>
-        </div>
-        <div class="card-content">
-          <p>A dashboard that predicts oceanic changes around the world, with a primary focus on North America.</p>
-          <br>
-          <p><strong>Tech:</strong> Tableau, AWS</p>
+      <!-- Project 3 -->
+      <div class="col s12 m6 l4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="./assets/img/oceanography-image.jpg" alt="Oceanic Dashboard" />
+            <span class="card-title primary-color-text">Climate Change Oceanic Dashboard Prediction System</span>
+          </div>
+          <div class="card-content">
+            <p>A dashboard that predicts oceanic changes around the world, with a primary focus on North America.</p>
+            <br>
+            <p><strong>Tools:</strong> Tableau, AWS</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Skills Section -->
-<section id="skills" class="section container">
-  <h4 class="center-align" data-aos="fade-up">Skills</h4>
-  <div class="container">
-    <!-- Languages and Databases -->
-    <div class="card">
+  <section id="skills" class="section container">
+    <h4 class="center-align" data-aos="fade-up">Skills</h4>
+  
+    <div data-aos="fade-up" data-aos-delay="150" class="card hoverable">
       <div class="card-content">
-        <h5 class="brown-text light">Languages and Databases</h4>
-        <div class="row text-center">
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/python-logo.png" class="responsive-img" />Python
+        <span class="card-title primary-color-text">Languages and Databases</span>
+        <div class="row center-align" style="margin-top: 20px;">
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.2s;">
+            <img src="./assets/img/python-logo.png" alt="Python" class="responsive-img" />
+            <p>Python</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/html5.png" class="responsive-img" />HTML5
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.2s;">
+            <img src="./assets/img/html5.png" alt="HTML5" class="responsive-img" />
+            <p>HTML5</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/css3.png" class="responsive-img" />CSS3
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.3s;">
+            <img src="./assets/img/css3.png" alt="CSS3" class="responsive-img" />
+            <p>CSS3</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/javascript.png" class="responsive-img" />JavaScript
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.4s;">
+            <img src="./assets/img/javascript.png" alt="JavaScript" class="responsive-img" />
+            <p>JavaScript</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/mysql-logo.png" class="responsive-img" />MySQL
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.5s;">
+            <img src="./assets/img/mysql-logo.png" alt="MySQL" class="responsive-img" />
+            <p>MySQL</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/postgresql-logo.png" class="responsive-img" />PostgreSQL
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.6s;">
+            <img src="./assets/img/postgresql-logo.png" alt="PostgreSQL" class="responsive-img" />
+            <p>PostgreSQL</p>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="card">
+  
+    <div data-aos="fade-up" data-aos-delay="300" class="card hoverable" style="margin-top: 30px;">
       <div class="card-content">
-        <h5 class="brown-text light">Other</h4>
-        <div class="row text-center">
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/git.png" class="responsive-img" />Git
+        <span class="card-title primary-color-text">Other Tools & Technologies</span>
+        <div class="row center-align" style="margin-top: 20px;">
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.1s;">
+            <img src="./assets/img/git.png" alt="Git" class="responsive-img" />
+            <p>Git</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/aws-logo.png" class="responsive-img" />AWS
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.2s;">
+            <img src="./assets/img/aws-logo.png" alt="AWS" class="responsive-img" />
+            <p>AWS</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/tableau.png" class="responsive-img" />Tableau
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.3s;">
+            <img src="./assets/img/tableau.png" alt="Tableau" class="responsive-img" />
+            <p>Tableau</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/powerbi.png" class="responsive-img" />Power BI
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.4s;">
+            <img src="./assets/img/powerbi.png" alt="Power BI" class="responsive-img" />
+            <p>Power BI</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/jira.png" class="responsive-img" />Jira
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.5s;">
+            <img src="./assets/img/jira.png" alt="Jira" class="responsive-img" />
+            <p>Jira</p>
           </div>
-          <div class="col s4 m2">
-            <img alt="" src="./assets/img/google-analytics.png" class="responsive-img" />Google Analystics
+          <div class="col s4 m2 skill-item" style="animation-delay: 0.6s;">
+            <img src="./assets/img/google-analytics.png" alt="Google Analytics" class="responsive-img" />
+            <p>Google Analytics</p>
           </div>
         </div>
       </div>
     </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section container">
@@ -311,9 +339,25 @@
     </div>
   </section>
 
-  <!-- Materialize Script -->
+  <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Initialize AOS library
+    AOS.init({
+      duration: 900,
+      once: true, // animations play only once while scrolling down
+      easing: 'ease-out-cubic'
+    });
+
+    // Initialize Materialize sidenav
+    document.addEventListener('DOMContentLoaded', function() {
+      const elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+    });
+  </script>
 
   <script src="main.js"></script>
 </body>
